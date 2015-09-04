@@ -6,7 +6,6 @@ package teacher.zeb.amelie;
 public class Clothes
 {
     // TODO: Lägg till 10 olika klädestyper
-    protected int color;
     protected String size;
-    
+    protected Color color;
 }
