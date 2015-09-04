@@ -23,7 +23,7 @@ public class MainActivity extends Activity
 
         List<Clothes> clothes = new ArrayList<>(  ); //Skapa en lista med kläder
 
-        clothes.add( shirt ); // Lägg till tröjan
+        clothes.add( shirt ); // Lägg till ny tröja
 
         clothes.add( new Pants() ); //Lägg till nya byxor
 
