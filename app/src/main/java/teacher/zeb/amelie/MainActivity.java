@@ -34,15 +34,14 @@ public class MainActivity extends Activity
 
         for( Clothes thing : clothes )
         {
-            Shirt shirt2 = (Shirt) thing; //typecasting
+          //  Shirt shirt2 = (Shirt) thing; //typecasting
         }
 
-        Drawable blackSkirt = getDrawable(R.drawable.black_skirt);
         Palette palette = Palette.generate(BitmapFactory.decodeResource(getResources(), R.drawable.black_skirt));
         palette.getSwatches();
 
         for(Palette.Swatch swatch : palette.getSwatches()){
-            Log.d("Swatch", Integer.toHexString(swatch.getRgb()));
+            Log.d("Swatch", swatch + ": " + Integer.toHexString(swatch.getRgb()));
 
         }
 
