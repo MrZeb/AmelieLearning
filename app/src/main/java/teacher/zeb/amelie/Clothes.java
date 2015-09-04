@@ -7,5 +7,6 @@ public class Clothes
 {
     // TODO: Lägg till 10 olika klädestyper
     protected Color color;
+    private  Color green;
     
 }
