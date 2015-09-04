@@ -1,7 +1,11 @@
 package teacher.zeb.amelie;
 
 import android.app.Activity;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v7.graphics.Palette;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -11,6 +15,7 @@ import java.util.List;
 public class MainActivity extends Activity
 {
 
+   // TODO: fixa emulatorn :)
     @Override
     protected void onCreate( Bundle savedInstanceState )
     {
@@ -23,15 +28,26 @@ public class MainActivity extends Activity
 
         List<Clothes> clothes = new ArrayList<>(  ); //Skapa en lista med kläder
 
-        clothes.add( shirt ); // Lägg till ny tröja
+        clothes.add(shirt); // Lägg till ny tröja
 
-        clothes.add( new Pants() ); //Lägg till nya byxor
+        clothes.add(new Pants()); //Lägg till nya byxor
 
         for( Clothes thing : clothes )
         {
             Shirt shirt2 = (Shirt) thing; //typecasting
         }
+
+        Drawable blackSkirt = getDrawable(R.drawable.black_skirt);
+        Palette palette = Palette.generate(BitmapFactory.decodeResource(getResources(), R.drawable.black_skirt));
+        palette.getSwatches();
+
+        for(Palette.Swatch swatch : palette.getSwatches()){
+            Log.d("Swatch", Integer.toHexString(swatch.getRgb()));
+
+        }
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu( Menu menu )
