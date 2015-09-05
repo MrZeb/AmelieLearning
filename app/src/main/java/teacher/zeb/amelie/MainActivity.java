@@ -40,11 +40,16 @@ public class MainActivity extends Activity
         Palette palette = Palette.generate(BitmapFactory.decodeResource(getResources(), R.drawable.black_skirt));
         palette.getSwatches();
 
+        //TODO: Hitta den vanligaste färgen
         for(Palette.Swatch swatch : palette.getSwatches()){
             Log.d("Swatch", swatch + ": " + Integer.toHexString(swatch.getRgb()));
 
         }
 
+        //TODO: Hitta den färgen (Color) som är närmst den vanligaste färgen
+
+        //TODO: Visa en popup för användaren där hen får välja om den färgen som hittats är rätt eller om hen
+        // vill använda en egen
     }
 
 
