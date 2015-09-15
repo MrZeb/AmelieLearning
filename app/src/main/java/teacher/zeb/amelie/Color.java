@@ -11,5 +11,5 @@ public enum Color
     LIGHTSLAYGREY, MEDIUMAQUA, TEAL, WHITESMOKE, WHEAT;
 
 
-    //TODO: Skapa en fil i res/values/ som heter color.xml som innehåller färgvärden för varje färg (t.ex. #FFFFFF för vit osv)
+    //TODO: Skapa en fil i res/values/ som heter colors.xml som innehåller färgvärden för varje färg (t.ex. #FFFFFF för vit osv)
 }

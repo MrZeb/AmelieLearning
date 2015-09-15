@@ -8,9 +8,18 @@
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context=".MainActivity">
 
-    <TextView
-        android:text="@string/hello_world"
+    <!-- Här skall vi visa vår bild.-->
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/main_picture"/>
+
+    <!-- Här visas färgen som är vanligast i bilden! :) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/common_color"
+        android:layout_below="@+id/main_picture"/>
 
 </RelativeLayout>
