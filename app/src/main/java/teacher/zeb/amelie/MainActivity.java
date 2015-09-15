@@ -2,7 +2,6 @@ package teacher.zeb.amelie;
 
 import android.app.Activity;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.graphics.Palette;
 import android.util.Log;
@@ -34,18 +33,25 @@ public class MainActivity extends Activity
 
         for( Clothes thing : clothes )
         {
-            Shirt shirt2 = (Shirt) thing; //typecasting
+          //  Shirt shirt2 = (Shirt) thing; //typecasting
         }
 
-        Drawable blackSkirt = getDrawable(R.drawable.black_skirt);
         Palette palette = Palette.generate(BitmapFactory.decodeResource(getResources(), R.drawable.black_skirt));
         palette.getSwatches();
 
+        //TODO: Hitta den vanligaste färgen
         for(Palette.Swatch swatch : palette.getSwatches()){
-            Log.d("Swatch", Integer.toHexString(swatch.getRgb()));
+            Log.d("Swatch", swatch + ": " + Integer.toHexString(swatch.getRgb()));
 
         }
 
+        //TODO: Hitta den färgen (Color) som är närmst den vanligaste färgen
+        palette = Palette.generate(BitmapFactory.decodeResource(getResources(), R.drawable.black_skirt));
+
+
+        //TODO: Visa en popup för användaren där hen får välja om den färgen som hittats är rätt eller om hen
+        // vill använda en egen
+        //is it right color? Yes or no...
     }
 
 
